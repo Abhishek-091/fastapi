@@ -6,6 +6,8 @@ from app.config import get_settings
 settings = get_settings()
 Base = declarative_base()
 
+from app.models import user
+
 print("Database URL:", settings.DATABASE_URL)
 engine = create_engine(settings.DATABASE_URL, echo=False)
 
